@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width-device-width,initial-scale=1.0">
+            <tittle>BussinessPro Dashboard</tittle>
+            <link rel="stylesheet" href="style.css">
+
+            <!--Icon-->
+            <link rel="stylesheet" href="style.css">
+        </head>
+
+        <body>
+            <div class="dashboard">
+              
+                <!--SIDEBAR-->
+                <aside class="sidebar">
+
+                    <div claass="logo">
+                        <div class="logo-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        
+                        <h2>Bussiness<span>Pro</span></h2>
+                    </div>
+
+                    <nav>
+                        <p class="menu-title">MAIN MENU</p>
+
+                        <a href="#" class="active">
+                            <i class="fa-solid fa-house"></i>
+                            Dashboard
+                        </a>
+
+                  <a href="#"><i class=" fa-solid fa-cart-shopping"></i>
+                              Orders
+                        </a>
+
+                        <a href="#"><i class="fa-solid  fa-users"></i>
+                              Customers
+                        </a>
+
+                         <a href="#"><i class="fa-solid fa-box"></i>
+                              Products
+                        </a>
+
+                         <a href="#"><i class="fa-solid fa-chart-pie"></i>
+                              Analytics
+                        </a>
+
+                        <p class="menu-tittle">MANAGEMANT</p>
+
+                         <a href="#"><i class="fa-solid fa-wallet"></i>
+                              Transactions
+                        </a>
+
+                         <a href="#"><i class="fa-solid fa-gear"></i>
+                              Settings
+                        </a>
+                    </nav>
+
+                    <div class="sidebar-bottom">
+
+                        <div class="help-box">
+                          <i class="fa-solid fa-circle-question"></i>
+
+                            <h4>Need Help?</h4>
+                            <p>Contact our support team.</p>
+
+                            <button>Get Support</button>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+                <!-- MAIN CONTENT -->
+                <main class="main">
+
+                    <!-- TOP BAR -->
+                     <header class="topbar">
+
+                        <div class="search">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                            <input type="text" placeholder="Search anything...">
+                        </div>
+
+                        <div class="top-action">
+                            
+                            <button class="notification">
+
+                                <i class="fa-regular fa-bell"></i>
+                                          <span></span>
+                            </button>
+
+                            <div class="profile">
+                                <div class="avatar">
+                                      FA
+                                </div>
+
+                                <div>
+                                    <strong>FariDev Admin</strong>
+
+                                    <small>Administrator</small>
+                                </div>
+
+                                <i class="fa-solid fa-chevron-down"></i>
+
+                            </div>
+
+                        </div>
+
+                     </header>
+
+                     <!-- CONTENT -->
+                      <section class="content">
+
+                        <div class="welcome">
+
+                            <div>
+                                <h1>Good Morning, Fari</h1>
+
+                                <p>Here's what's happening with your bussiness today. </p>
+                            </div>
+
+                            <button class="date-btn">
+                                <i class="fa-regular fa-calender"></i>
+                                      August 14, 2026
+                            </button>
+
+                        </div>
+
+                        <!-- STAT CARDS -->
+                         <div class="stats">
+
+                            <div class="stat-card">
+
+                                <div class="stat-top">
+
+                                    <div class="stat-icon revenue">
+                                        <i class="fa-solid fa-dollar-sign"></i>
+                                    </div>
+
+                                    <span class="growth">
+                                        +12.5%
+                                    </span>
+                                </div>
+
+                                <p>Total Revenue</p>
+                                <h2>$24,680</h2>
+                                
+                                <small>Compared to last month</small>
+
+                            </div>
+
+                            <div class="stat-card">
+
+                                <div class="stat-top">
+
+                                    <div class="stat-icon orders">
+
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </div>
+
+                                    <span class="growth">
+                                        +8.2%
+                                    </span>
+                                </div>
+
+                                <p>Total Orders</p>
+                                <h2>1,248</h2>
+
+                                <small>Compared to last month</small>
+                            </div>
+
+                            <div class="stat-card">
+
+                                <div class="stat-top">
+
+                                    <div class="stat-icon customers">
+                                        <i class="fa-solid fa-users"></i>
+                                    </div>
+
+                                    <span class="growth">
+                                        +15.4%
+                                    </span>
+                                </div>
+
+                                <p>Customers</p>
+                                <h2>8,642</h2>
+
+                                <small>Compared to last month</small>
+                            </div>
+
+                              <div class="stat-card">
+
+                                <div class="stat-top">
+
+                                    <div class="stat-icon products">
+                                        <i class="fa-solid fa-box"></i>
+                                    </div>
+
+                                    <span class="growth">
+                                        +4.7%
+                                    </span>
+                                </div>
+
+                                <p>Products Sold</p>
+                                <h2>3,856</h2>
+
+                                <small>Compared to last month</small>
+                              </div>                         
+                         </div>
+
+                         <!-- CHARTS + QUICK ACTIONS -->
+
+                         <div class="middle-grid">
+
+                            <div class="panel chart-panel">
+
+                                <div class="panel-header">
+
+                                    <div>
+                                        <h3>Revenue Overview</h3>
+                                        <p>Monthly revenue performance</p>
+                                    </div>
+
+                                    <select>
+                                        <option>Last 6 Months</option>
+
+                                        <option>Last 12 Months</option>
+                                    </select>
+                                </div>
+
+                                <div class="chart">
+
+                                    <div class="y-axis">
+
+                                        <span>$30k</span>
+
+                                        <span>$20k</span>
+
+                                        <span>$10k</span>
+
+                                        <span>$0</span>
+                                    </div>
+
+                                    <div class="chart-area">
+
+                                    <div class="grid-line line1"></div>
+
+                                    <div clas="grid-line line2"></div>
+
+                                    <div class="grid-line line3"></div>
+
+                                    <div class="grid-line line4"></div>
+
+                                    <div class="bars">
+
+                                        <div class="bar-item">
+
+                                            <div class="bar b1"></div>
+
+                                            <span>Mar</span>
+                                        </div>
+
+                                        <div class="bar-item">
+
+                                            <div class="bar b2"></div>
+
+                                            <span>Apr</span>
+                                        </div>
+
+                                        <div class="bar-item">
+
+                                            <div class="bar b3"></div>
+
+                                            <span>May</span>
+                                        </div>
+
+                                        <div class="bar-item">
+
+                                            <div class="bar b4"></div>
+
+                                            <span>Jun</span>
+                                        </div>
+
+                                        <div class="bar-item">
+
+                                            <div class="bar b5"></div>
+
+                                            <span>July</span>
+                                        </div>
+
+                                        <div class="bar-item">
+
+                                            <div class="bar b6"></div>
+
+                                            <span>Aug</span>
+                                        </div>
+                                    </div>
+
+                                 </div>
+
+                             </div>
+
+                        </div>
+
+                        <!-- QUICK ACTIONS -->
+
+                        <div class="panel quick-panel">
+
+                            <div class="panel-header">
+
+                                <div>
+                                    <h3>Quick Actions</h3>
+                                    <p>Manag your bussiness</p>
+                                </div>
+                            </div>
+
+                            <div class="quick-actions">
+                                <button>
+                                    <i class="fa-solid fa-plus"></i>
+
+                                    <span>
+                                        <strong>Add Product</strong>
+
+                                        <small>Create a new product</small>
+                                    </span>
+                                </button>
+
+                                <button>
+                                    <i class="fa-solid fa-user-plus"></i>
+
+                                    <span>
+                                        <strong>Add Customer</strong>
+                                        <small>Create customer profile</small>
+                                    </span>
+                                </button>
+
+                                <button id="addOrderBtn">
+                                    <i class="fa-solid fa-cart-pluse"></i>
+
+                                    <span>
+                                        <strong>Add Order</strong>
+                                        <small>Create a new order</small>
+                                    </span>
+                                </button>
+
+                                <button>
+                                    <i class="fa-solid fa-file-invioce"></i>
+
+                                     <span>
+                                        <strong>Create Invoice</strong>
+                                        <small>Generate new invioce</small>
+                                    </span>
+                                </button>
+
+                                <button>
+                                    <i class="fa-solid fa-chart-simple"></i>
+
+                                    <span>
+                                        <strong>View Reports</strong>
+                                        <small>Check bussiness reports</small>
+                                    </span>
+                                </button>
+                            </div>
+
+                        </div>
+
+                     </div>
+
+                     <!-- RECENT ORDERS -->
+                      <div class="panel orders-panel">
+
+                        <div class="panel-header">
+
+                            <div>
+                                <h3>Recent Orders</h3>
+                                <p>Latests customer orders</p>
+                            </div>
+
+                            <button class="view-btn">
+                                View All 
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+
+                        <div class="table-container">
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Customer</th>
+                                        <th>Order ID</th>
+                                        <th>Product</th>
+                                        <th>Date</th>
+                                        <th>Amount</th>
+                                        <th>States</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="customer">
+                                                <div class="customer-avatar">AM</div>
+
+                                                <div>
+                                                    <strong>Ahmed Malik</strong>
+                                                    <small>ahmed@email.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>#ORD-1024</td>
+                                        <td>Premium  Package</td>
+                                        <td>Aug 14, 2026</td>
+                                        <td><strong>$420</strong></td>
+
+                                        <td>
+                                            <span class="status completed">
+                                                Completed
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="customer">
+
+                                                <div class="customer-avatar">SK</div>
+
+                                                <div>
+                                                    <strong>Sara Khan</strong>
+                                                    <small>sara@email.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>#ORD-1023</td>
+                                        <td>Bussiness Plan</td>
+                                        <td>Aug 13, 2026</td>
+                                        <td><strong>$680</strong></td>
+
+                                        <td>
+                                            <span class="status pending">
+                                                Pending
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="customer">
+                                                <div class="customer-avatar">HA</div>
+
+                                                <div>
+                                                    <strong>Hassan Ali</strong>
+                                                    <small>hassan@email.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>#ORD-1022</td>
+                                        <td>Starter Package</td>
+                                        <td>Aug 12, 2026</td>
+                                        <td><strong>$250</strong></td>
+
+                                        <td>
+                                            <span class="status completed">
+                                                Completed
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div class="customer">
+                                                <div class="customer-avatar">ZN</div>
+
+                                                <div>
+                                                    <strong>Zainab Noor</strong>
+                                                    <small>zainab@email.com</small>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>#ORD-1021</td>
+                                        <td>Enterprise Plan</td>
+                                        <td>Aug 11, 2026</td>
+                                        <td><strong>$1,240</strong></td>
+
+                                        <td>
+                                            <span class="status cancelled">
+                                                Cancelled
+                                            </span>
+
+                                        </td>
+
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                     </div>
+
+                     <!-- ===========================
+                            PRODUCT TABLE
+                     ============================= -->
+
+                     <div class="product-table">
+                        <h3>Products</h3>
+
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Category</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="productTableBody"></tbody>
+                              
+                        </table>
+                     </div>
+
+                     <!-- ============================ 
+                           CUSTOMER TABLE
+                     ============================= -->
+
+                     <div class="customer-table">
+                        <h3>Customers</h3>
+
+                        <table>
+
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="customerTableBody"></tbody>
+                              
+                        </table>
+                     </div>
+
+                     <!-- =======================
+                             ADD ORDERS
+                      ======================= -->
+
+                      <section id="orders" class="section">
+
+                        <div class="section-header">
+                            <div>
+                                <h2>Orders</h2>
+                                <p>Manage your customer orders</p>
+                            </div>
+
+                            <button class="primary-btn" id="addOrderBtn">
+                                + Add Order
+                            </button>
+                        </div>
+
+                        <!-- ======================
+                              ADD ORDER FORM
+                        ======================= -->
+
+                        <div class="form-container" id="orderFormContainer">
+                            <form id="orderForm">
+                                <div class="form-group">
+                                    <label for="orderCustomer">Customer</label>
+                                    <input type="text" id="orderCustomer" placeholder="Enter Customer Name" required>
+                                </div>
+
+                                 <div class="form-group">
+                                    <label for="orderProduct">Product</label>
+                                    <input type="text" id="orderProduct" placeholder="Enter Product Name" required>
+                                </div>
+
+                                 <div class="form-group">
+                                    <label for="orderQuantity">Quantity</label>
+                                    <input type="number" id="orderQuantity" placeholder="Enter quantity" min="1" required>
+                                </div>
+
+                                 <div class="form-group">
+                                    <label for="orderPrice">Price</label>
+                                    <input type="number" id="orderPrice" placeholder="Enter Price" min="0" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="orderStatus">Status</label>
+                                    <select id="orderStatus">
+                                        <option value="Pending">Pending</option>
+                                        <option value="Processing">Processing</option>
+                                        <option value="Completed">Completed</option>
+                                        <option value="cancelled">Cancelled</option>
+                                    </select>
+                                </div>
+
+                                 <div class="form-action">
+                                    <button type="submit" class="primary-btn">
+                                        Add Order
+                                    </button>
+
+                                 
+                                    <button type="button" class="secondary-btn" id="cancelOrderbtn">
+                                        Cancel
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                     <!-- =========================
+                           ORDERS TABLE
+                     ========================== -->
+
+                     <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Order ID</th>
+                                    <th>Customer</th>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Price</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="ordersTableBody">
+                              <!-- Orders will appear here -->
+                            </tbody>
+                        </table>
+                     </div>
+                      </section>
+
+
+               </section>
+
+          </main>
+
+      </div>
+
+      <script src="script.js"></script>
+
+   </body>
+
+ </html>
