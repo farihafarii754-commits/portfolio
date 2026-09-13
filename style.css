@@ -243,6 +243,16 @@ nav a i{
     padding: 30px 35px;
 }
 
+/* SIDEBAR NAVIGATION - SECTION SWITCHING */
+
+.content > .section{
+    display: none;
+}
+
+.content > .section.active{
+    display: block;
+}
+
 .welcome{
     display:flex;
     align-items: center;
@@ -906,49 +916,9 @@ form.buttons {
 #orderFormContainer{
     
     margin-top: 20px;
+    display: none;
 }
 
-
-#orderForm{
-    display: grid;
-    gap: 16px;
-}
-
-#orderForm .form-group{
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-}
-
-#orderForm label{
-    font-weight: 600;
-}
-
-#orderForm input,
-#orderForm select {
-    width: 100%;
-    padding: 12px 14px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 14px;
-    outline: none;
-}
-
-
-#orderForm input:focus,
-#orderForm select:focus {
-     border-color: #666;
-}
-
-#orderForm .form-action {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-#orderForm .form-action button{
-    cursor: pointer;
-}
 
 /* ORDERS TABLE */
 
@@ -993,6 +963,47 @@ form.buttons {
     font-weight: 600;
 }
 
+/* PRIMARY / SECONDARY BUTTONS (Add Order + Cancel) */
+
+.primary-btn{
+    background: #4f7cff;
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.primary-btn:hover{
+    background: #3d68f0;
+}
+
+.secondary-btn{
+    background: #6b7280;
+    color: #fff;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.secondary-btn:hover{
+    background: #59606d;
+}
+
+/* PROCESSING STATUS (Pending / Completed / Cancelled already exist) */
+
+.processing{
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
 /* ORDER FORM CARD */
 
 #orderFormContainer{
@@ -1002,12 +1013,12 @@ form.buttons {
     border-radius: 12px;
     margin-bottom: 25px;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.09);
-    border: 1 px solid #eee;
+    border: 1px solid #eee;
 
 }
 
 #orderForm{
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
@@ -1044,12 +1055,11 @@ form.buttons {
 /* BUTTON */
 
 #orderForm .form-action{
-    grid-template-columns: 1 / -1;
     display: flex;
     justify-content: flex-end;
     gap: 10px;
     padding-top: 15px;
-    border-top: 1 px solid #eee;
+    border-top: 1px solid #eee;
 }
 
 #orderForm .form-action button{
@@ -1066,9 +1076,22 @@ form.buttons {
     background: #fff;
     padding: 20px;
     border-radius: 12px;
-    border: 1 px solid #eee;
+    border: 1px solid #eee;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.09);
     overflow-x: auto;
+}
+
+#orders .table-container h3{
+    margin: 0 0 16px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#orders .empty-row td{
+    text-align: center;
+    color: #9aa2b1;
+    padding: 24px;
+    font-style: italic;
 }
 
 #orders table {

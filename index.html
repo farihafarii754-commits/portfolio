@@ -3,11 +3,11 @@
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width-device-width,initial-scale=1.0">
-            <tittle>BussinessPro Dashboard</tittle>
+            <title>BussinessPro Dashboard</title>
             <link rel="stylesheet" href="style.css">
 
             <!--Icon-->
-            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         </head>
 
         <body>
@@ -27,34 +27,34 @@
                     <nav>
                         <p class="menu-title">MAIN MENU</p>
 
-                        <a href="#" class="active">
+                        <a href="#" class="active" data-section="dashboard">
                             <i class="fa-solid fa-house"></i>
                             Dashboard
                         </a>
 
-                  <a href="#"><i class=" fa-solid fa-cart-shopping"></i>
+                  <a href="#" data-section="orders"><i class=" fa-solid fa-cart-shopping"></i>
                               Orders
                         </a>
 
-                        <a href="#"><i class="fa-solid  fa-users"></i>
+                        <a href="#" data-section="customers"><i class="fa-solid  fa-users"></i>
                               Customers
                         </a>
 
-                         <a href="#"><i class="fa-solid fa-box"></i>
+                         <a href="#" data-section="products"><i class="fa-solid fa-box"></i>
                               Products
                         </a>
 
-                         <a href="#"><i class="fa-solid fa-chart-pie"></i>
+                         <a href="#" data-section="analytics"><i class="fa-solid fa-chart-pie"></i>
                               Analytics
                         </a>
 
                         <p class="menu-tittle">MANAGEMANT</p>
 
-                         <a href="#"><i class="fa-solid fa-wallet"></i>
+                         <a href="#" data-section="transactions"><i class="fa-solid fa-wallet"></i>
                               Transactions
                         </a>
 
-                         <a href="#"><i class="fa-solid fa-gear"></i>
+                         <a href="#" data-section="settings"><i class="fa-solid fa-gear"></i>
                               Settings
                         </a>
                     </nav>
@@ -118,6 +118,8 @@
                      <!-- CONTENT -->
                       <section class="content">
 
+                        <section id="dashboard" class="section active">
+
                         <div class="welcome">
 
                             <div>
@@ -127,7 +129,7 @@
                             </div>
 
                             <button class="date-btn">
-                                <i class="fa-regular fa-calender"></i>
+                                <i class="fa-regular fa-calendar-days"></i>
                                       August 14, 2026
                             </button>
 
@@ -150,7 +152,7 @@
                                 </div>
 
                                 <p>Total Revenue</p>
-                                <h2>$24,680</h2>
+                                <h2 id="totalRevenueValue">$24,680</h2>
                                 
                                 <small>Compared to last month</small>
 
@@ -171,7 +173,7 @@
                                 </div>
 
                                 <p>Total Orders</p>
-                                <h2>1,248</h2>
+                                <h2 id="totalOrdersValue">1,248</h2>
 
                                 <small>Compared to last month</small>
                             </div>
@@ -341,8 +343,8 @@
                                     </span>
                                 </button>
 
-                                <button id="addOrderBtn">
-                                    <i class="fa-solid fa-cart-pluse"></i>
+                                <button id="quickAddOrderBtn">
+                                    <i class="fa-solid fa-cart-plus"></i>
 
                                     <span>
                                         <strong>Add Order</strong>
@@ -351,7 +353,7 @@
                                 </button>
 
                                 <button>
-                                    <i class="fa-solid fa-file-invioce"></i>
+                                    <i class="fa-solid fa-file-invoice"></i>
 
                                      <span>
                                         <strong>Create Invoice</strong>
@@ -511,9 +513,13 @@
 
                      </div>
 
+                     </section>
+
                      <!-- ===========================
                             PRODUCT TABLE
                      ============================= -->
+
+                     <section id="products" class="section">
 
                      <div class="product-table">
                         <h3>Products</h3>
@@ -534,9 +540,13 @@
                         </table>
                      </div>
 
+                     </section>
+
                      <!-- ============================ 
                            CUSTOMER TABLE
                      ============================= -->
+
+                     <section id="customers" class="section">
 
                      <div class="customer-table">
                         <h3>Customers</h3>
@@ -556,6 +566,8 @@
                               
                         </table>
                      </div>
+
+                     </section>
 
                      <!-- =======================
                              ADD ORDERS
@@ -610,6 +622,11 @@
                                     </select>
                                 </div>
 
+                                <div class="form-group">
+                                    <label for="orderDate">Order Date</label>
+                                    <input type="date" id="orderDate">
+                                </div>
+
                                  <div class="form-action">
                                     <button type="submit" class="primary-btn">
                                         Add Order
@@ -628,6 +645,7 @@
                      ========================== -->
 
                      <div class="table-container">
+                        <h3>Orders List</h3>
                         <table>
                             <thead>
                                 <tr>
@@ -649,6 +667,59 @@
                      </div>
                       </section>
 
+                      <!-- =======================
+                              ANALYTICS
+                      ======================= -->
+
+                      <section id="analytics" class="section">
+                        <div class="section-header">
+                            <div>
+                                <h2>Analytics</h2>
+                                <p>Track your business performance</p>
+                            </div>
+                        </div>
+
+                        <div class="table-container">
+                            <h3>Analytics</h3>
+                            <p style="color:#777; padding: 10px 0;">Detailed analytics are coming soon.</p>
+                        </div>
+                      </section>
+
+                      <!-- =======================
+                              TRANSACTIONS
+                      ======================= -->
+
+                      <section id="transactions" class="section">
+                        <div class="section-header">
+                            <div>
+                                <h2>Transactions</h2>
+                                <p>View your payment transactions</p>
+                            </div>
+                        </div>
+
+                        <div class="table-container">
+                            <h3>Transactions</h3>
+                            <p style="color:#777; padding: 10px 0;">Transaction history is coming soon.</p>
+                        </div>
+                      </section>
+
+                      <!-- =======================
+                              SETTINGS
+                      ======================= -->
+
+                      <section id="settings" class="section">
+                        <div class="section-header">
+                            <div>
+                                <h2>Settings</h2>
+                                <p>Manage your account and preferences</p>
+                            </div>
+                        </div>
+
+                        <div class="table-container">
+                            <h3>Settings</h3>
+                            <p style="color:#777; padding: 10px 0;">Settings options are coming soon.</p>
+                        </div>
+                      </section>
 
                </section>
 

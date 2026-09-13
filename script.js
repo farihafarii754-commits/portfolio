@@ -176,9 +176,9 @@ quickButtons.forEach(function (button) {
             const newRow = document.createElement("tr");
 
             newRow.innerHTML = `
-                                 <td>$ {productName}</td>
-                                 <td>$ {productPrice}</td>
-                                 <td>$ {productCategory}</td>
+                                 <td>${productName}</td>
+                                 <td>${productPrice}</td>
+                                 <td>${productCategory}</td>
                                 
             <td>
                 <button class="edit-product">Edit</button>
@@ -304,9 +304,9 @@ quickButtons.forEach(function (button) {
             const newRow = document.createElement("tr");
 
             newRow.innerHTML = `
-                                 <td>$ {customerName}</td>
-                                 <td>$ {customerEmail}</td>
-                                 <td>$ {customerPhone}</td>
+                                 <td>${customerName}</td>
+                                 <td>${customerEmail}</td>
+                                 <td>${customerPhone}</td>
                                 
             <td>
                 <button class="edit-customer">Edit</button>
@@ -621,3 +621,182 @@ function deletecustomer(id) {
 // STAGE 2 LOADED
 
 console.log("BusinessPro stage 2 loaded successfully!");
+
+// ==============================
+// STAGE 3 - ORDERS SECTION
+// ==============================
+
+(function () {
+
+    const orderFormContainer = document.getElementById("orderFormContainer");
+    const orderForm = document.getElementById("orderForm");
+    const openOrderFormBtn = document.getElementById("addOrderBtn");
+    const quickAddOrderBtn = document.getElementById("quickAddOrderBtn");
+    const cancelOrderBtn = document.getElementById("cancelOrderbtn");
+    const ordersTableBody = document.getElementById("ordersTableBody");
+    const totalOrdersValue = document.getElementById("totalOrdersValue");
+    const totalRevenueValue = document.getElementById("totalRevenueValue");
+
+    if (!orderFormContainer || !orderForm || !ordersTableBody) return;
+
+    let orderSequence = 1024;
+
+    // Form starts hidden until "+ Add Order" is clicked
+    orderFormContainer.style.display = "none";
+
+    function openOrderForm() {
+        orderFormContainer.style.display = "block";
+        orderFormContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+
+        const orderDateInput = document.getElementById("orderDate");
+        if (orderDateInput && !orderDateInput.value) {
+            const today = new Date();
+            const iso = today.getFullYear() + "-" +
+                        String(today.getMonth() + 1).padStart(2, "0") + "-" +
+                        String(today.getDate()).padStart(2, "0");
+            orderDateInput.value = iso;
+        }
+    }
+
+    function closeOrderForm() {
+        orderFormContainer.style.display = "none";
+        orderForm.reset();
+    }
+
+    if (openOrderFormBtn) {
+        openOrderFormBtn.addEventListener("click", function () {
+            openOrderForm();
+        });
+    }
+
+    if (quickAddOrderBtn) {
+        quickAddOrderBtn.addEventListener("click", function (event) {
+            event.stopPropagation();
+
+            const ordersNavLink = document.querySelector('.sidebar nav a[data-section="orders"]');
+            if (ordersNavLink) {
+                ordersNavLink.click();
+            }
+
+            const ordersSection = document.getElementById("orders");
+            if (ordersSection) {
+                ordersSection.scrollIntoView({ behavior: "smooth" });
+            }
+            openOrderForm();
+        });
+    }
+
+    if (cancelOrderBtn) {
+        cancelOrderBtn.addEventListener("click", function () {
+            closeOrderForm();
+        });
+    }
+
+    orderForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const customer = document.getElementById("orderCustomer").value.trim();
+        const product = document.getElementById("orderProduct").value.trim();
+        const quantity = parseInt(document.getElementById("orderQuantity").value, 10);
+        const price = parseFloat(document.getElementById("orderPrice").value);
+        const statusSelect = document.getElementById("orderStatus");
+        const statusText = statusSelect.options[statusSelect.selectedIndex].text;
+
+        if (
+            customer === "" ||
+            product === "" ||
+            !quantity || quantity < 1 ||
+            isNaN(price) || price < 0
+        ) {
+            alert("Please fill all fields correctly.");
+            return;
+        }
+
+        const total = quantity * price;
+
+        orderSequence++;
+        const orderId = "#ORD-" + orderSequence;
+
+        const orderDateInput = document.getElementById("orderDate");
+        let dateString;
+        if (orderDateInput && orderDateInput.value) {
+            const [year, month, day] = orderDateInput.value.split("-");
+            dateString = day + "/" + month + "/" + year;
+        } else {
+            const today = new Date();
+            dateString = today.toLocaleDateString("en-GB");
+        }
+
+        const statusClass = statusText.toLowerCase();
+
+        const newRow = document.createElement("tr");
+        newRow.innerHTML = `
+            <td>${orderId}</td>
+            <td>${customer}</td>
+            <td>${product}</td>
+            <td>${quantity}</td>
+            <td>${price.toLocaleString()}</td>
+            <td>${total.toLocaleString()}</td>
+            <td><span class="status ${statusClass}">${statusText}</span></td>
+            <td>${dateString}</td>
+        `;
+
+        ordersTableBody.appendChild(newRow);
+
+        // Update "Total Orders" stat card
+        if (totalOrdersValue) {
+            const currentOrders = parseInt(totalOrdersValue.textContent.replace(/,/g, ""), 10) || 0;
+            totalOrdersValue.textContent = (currentOrders + 1).toLocaleString("en-US");
+        }
+
+        // Update "Total Revenue" stat card
+        if (totalRevenueValue) {
+            const currentRevenue = parseFloat(totalRevenueValue.textContent.replace(/[$,]/g, "")) || 0;
+            totalRevenueValue.textContent = "$" + (currentRevenue + total).toLocaleString("en-US");
+        }
+
+        closeOrderForm();
+    });
+
+})();
+
+console.log("BusinessPro Orders section loaded successfully!");
+
+// ==============================
+// STAGE 4 - SIDEBAR NAVIGATION
+// ==============================
+
+(function () {
+
+    const navLinks = document.querySelectorAll(".sidebar nav a[data-section]");
+    const sections = document.querySelectorAll(".content > .section");
+
+    if (!navLinks.length || !sections.length) return;
+
+    function showSection(targetId) {
+        sections.forEach(function (section) {
+            if (section.id === targetId) {
+                section.classList.add("active");
+            } else {
+                section.classList.remove("active");
+            }
+        });
+    }
+
+    navLinks.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            navLinks.forEach(function (l) {
+                l.classList.remove("active");
+            });
+            link.classList.add("active");
+
+            const targetId = link.getAttribute("data-section");
+            showSection(targetId);
+        });
+    });
+
+})();
+
+console.log("BusinessPro sidebar navigation loaded successfully!");
