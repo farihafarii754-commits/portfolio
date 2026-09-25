@@ -1,734 +1,86 @@
-<!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width-device-width,initial-scale=1.0">
-            <title>BussinessPro Dashboard</title>
-            <link rel="stylesheet" href="style.css">
-
-            <!--Icon-->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        </head>
-
-        <body>
-            <div class="dashboard">
-              
-                <!--SIDEBAR-->
-                <aside class="sidebar">
-
-                    <div claass="logo">
-                        <div class="logo-icon">
-                            <i class="fa-solid fa-chart-line"></i>
-                        </div>
-                        
-                        <h2>Bussiness<span>Pro</span></h2>
-                    </div>
-
-                    <nav>
-                        <p class="menu-title">MAIN MENU</p>
-
-                        <a href="#" class="active" data-section="dashboard">
-                            <i class="fa-solid fa-house"></i>
-                            Dashboard
-                        </a>
-
-                  <a href="#" data-section="orders"><i class=" fa-solid fa-cart-shopping"></i>
-                              Orders
-                        </a>
-
-                        <a href="#" data-section="customers"><i class="fa-solid  fa-users"></i>
-                              Customers
-                        </a>
-
-                         <a href="#" data-section="products"><i class="fa-solid fa-box"></i>
-                              Products
-                        </a>
-
-                         <a href="#" data-section="analytics"><i class="fa-solid fa-chart-pie"></i>
-                              Analytics
-                        </a>
-
-                        <p class="menu-tittle">MANAGEMANT</p>
-
-                         <a href="#" data-section="transactions"><i class="fa-solid fa-wallet"></i>
-                              Transactions
-                        </a>
-
-                         <a href="#" data-section="settings"><i class="fa-solid fa-gear"></i>
-                              Settings
-                        </a>
-                    </nav>
-
-                    <div class="sidebar-bottom">
-
-                        <div class="help-box">
-                          <i class="fa-solid fa-circle-question"></i>
-
-                            <h4>Need Help?</h4>
-                            <p>Contact our support team.</p>
-
-                            <button>Get Support</button>
-
-                        </div>
-
-                    </div>
-
-                </aside>
-
-                <!-- MAIN CONTENT -->
-                <main class="main">
-
-                    <!-- TOP BAR -->
-                     <header class="topbar">
-
-                        <div class="search">
-
-                            <i class="fa-solid fa-magnifying-glass"></i>
-
-                            <input type="text" placeholder="Search anything...">
-                        </div>
-
-                        <div class="top-action">
-                            
-                            <button class="notification">
-
-                                <i class="fa-regular fa-bell"></i>
-                                          <span></span>
-                            </button>
-
-                            <div class="profile">
-                                <div class="avatar">
-                                      FA
-                                </div>
-
-                                <div>
-                                    <strong>FariDev Admin</strong>
-
-                                    <small>Administrator</small>
-                                </div>
-
-                                <i class="fa-solid fa-chevron-down"></i>
-
-                            </div>
-
-                        </div>
-
-                     </header>
-
-                     <!-- CONTENT -->
-                      <section class="content">
-
-                        <section id="dashboard" class="section active">
-
-                        <div class="welcome">
-
-                            <div>
-                                <h1>Good Morning, Fari</h1>
-
-                                <p>Here's what's happening with your bussiness today. </p>
-                            </div>
-
-                            <button class="date-btn">
-                                <i class="fa-regular fa-calendar-days"></i>
-                                      August 14, 2026
-                            </button>
-
-                        </div>
-
-                        <!-- STAT CARDS -->
-                         <div class="stats">
-
-                            <div class="stat-card">
-
-                                <div class="stat-top">
-
-                                    <div class="stat-icon revenue">
-                                        <i class="fa-solid fa-dollar-sign"></i>
-                                    </div>
-
-                                    <span class="growth">
-                                        +12.5%
-                                    </span>
-                                </div>
-
-                                <p>Total Revenue</p>
-                                <h2 id="totalRevenueValue">$24,680</h2>
-                                
-                                <small>Compared to last month</small>
-
-                            </div>
-
-                            <div class="stat-card">
-
-                                <div class="stat-top">
-
-                                    <div class="stat-icon orders">
-
-                                        <i class="fa-solid fa-cart-shopping"></i>
-                                    </div>
-
-                                    <span class="growth">
-                                        +8.2%
-                                    </span>
-                                </div>
-
-                                <p>Total Orders</p>
-                                <h2 id="totalOrdersValue">1,248</h2>
-
-                                <small>Compared to last month</small>
-                            </div>
-
-                            <div class="stat-card">
-
-                                <div class="stat-top">
-
-                                    <div class="stat-icon customers">
-                                        <i class="fa-solid fa-users"></i>
-                                    </div>
-
-                                    <span class="growth">
-                                        +15.4%
-                                    </span>
-                                </div>
-
-                                <p>Customers</p>
-                                <h2>8,642</h2>
-
-                                <small>Compared to last month</small>
-                            </div>
-
-                              <div class="stat-card">
-
-                                <div class="stat-top">
-
-                                    <div class="stat-icon products">
-                                        <i class="fa-solid fa-box"></i>
-                                    </div>
-
-                                    <span class="growth">
-                                        +4.7%
-                                    </span>
-                                </div>
-
-                                <p>Products Sold</p>
-                                <h2>3,856</h2>
-
-                                <small>Compared to last month</small>
-                              </div>                         
-                         </div>
-
-                         <!-- CHARTS + QUICK ACTIONS -->
-
-                         <div class="middle-grid">
-
-                            <div class="panel chart-panel">
-
-                                <div class="panel-header">
-
-                                    <div>
-                                        <h3>Revenue Overview</h3>
-                                        <p>Monthly revenue performance</p>
-                                    </div>
-
-                                    <select>
-                                        <option>Last 6 Months</option>
-
-                                        <option>Last 12 Months</option>
-                                    </select>
-                                </div>
-
-                                <div class="chart">
-
-                                    <div class="y-axis">
-
-                                        <span>$30k</span>
-
-                                        <span>$20k</span>
-
-                                        <span>$10k</span>
-
-                                        <span>$0</span>
-                                    </div>
-
-                                    <div class="chart-area">
-
-                                    <div class="grid-line line1"></div>
-
-                                    <div clas="grid-line line2"></div>
-
-                                    <div class="grid-line line3"></div>
-
-                                    <div class="grid-line line4"></div>
-
-                                    <div class="bars">
-
-                                        <div class="bar-item">
-
-                                            <div class="bar b1"></div>
-
-                                            <span>Mar</span>
-                                        </div>
-
-                                        <div class="bar-item">
-
-                                            <div class="bar b2"></div>
-
-                                            <span>Apr</span>
-                                        </div>
-
-                                        <div class="bar-item">
-
-                                            <div class="bar b3"></div>
-
-                                            <span>May</span>
-                                        </div>
-
-                                        <div class="bar-item">
-
-                                            <div class="bar b4"></div>
-
-                                            <span>Jun</span>
-                                        </div>
-
-                                        <div class="bar-item">
-
-                                            <div class="bar b5"></div>
-
-                                            <span>July</span>
-                                        </div>
-
-                                        <div class="bar-item">
-
-                                            <div class="bar b6"></div>
-
-                                            <span>Aug</span>
-                                        </div>
-                                    </div>
-
-                                 </div>
-
-                             </div>
-
-                        </div>
-
-                        <!-- QUICK ACTIONS -->
-
-                        <div class="panel quick-panel">
-
-                            <div class="panel-header">
-
-                                <div>
-                                    <h3>Quick Actions</h3>
-                                    <p>Manag your bussiness</p>
-                                </div>
-                            </div>
-
-                            <div class="quick-actions">
-                                <button>
-                                    <i class="fa-solid fa-plus"></i>
-
-                                    <span>
-                                        <strong>Add Product</strong>
-
-                                        <small>Create a new product</small>
-                                    </span>
-                                </button>
-
-                                <button>
-                                    <i class="fa-solid fa-user-plus"></i>
-
-                                    <span>
-                                        <strong>Add Customer</strong>
-                                        <small>Create customer profile</small>
-                                    </span>
-                                </button>
-
-                                <button id="quickAddOrderBtn">
-                                    <i class="fa-solid fa-cart-plus"></i>
-
-                                    <span>
-                                        <strong>Add Order</strong>
-                                        <small>Create a new order</small>
-                                    </span>
-                                </button>
-
-                                <button>
-                                    <i class="fa-solid fa-file-invoice"></i>
-
-                                     <span>
-                                        <strong>Create Invoice</strong>
-                                        <small>Generate new invioce</small>
-                                    </span>
-                                </button>
-
-                                <button>
-                                    <i class="fa-solid fa-chart-simple"></i>
-
-                                    <span>
-                                        <strong>View Reports</strong>
-                                        <small>Check bussiness reports</small>
-                                    </span>
-                                </button>
-                            </div>
-
-                        </div>
-
-                     </div>
-
-                     <!-- RECENT ORDERS -->
-                      <div class="panel orders-panel">
-
-                        <div class="panel-header">
-
-                            <div>
-                                <h3>Recent Orders</h3>
-                                <p>Latests customer orders</p>
-                            </div>
-
-                            <button class="view-btn">
-                                View All 
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </button>
-                        </div>
-
-                        <div class="table-container">
-
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Customer</th>
-                                        <th>Order ID</th>
-                                        <th>Product</th>
-                                        <th>Date</th>
-                                        <th>Amount</th>
-                                        <th>States</th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="customer">
-                                                <div class="customer-avatar">AM</div>
-
-                                                <div>
-                                                    <strong>Ahmed Malik</strong>
-                                                    <small>ahmed@email.com</small>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        <td>#ORD-1024</td>
-                                        <td>Premium  Package</td>
-                                        <td>Aug 14, 2026</td>
-                                        <td><strong>$420</strong></td>
-
-                                        <td>
-                                            <span class="status completed">
-                                                Completed
-                                            </span>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="customer">
-
-                                                <div class="customer-avatar">SK</div>
-
-                                                <div>
-                                                    <strong>Sara Khan</strong>
-                                                    <small>sara@email.com</small>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        <td>#ORD-1023</td>
-                                        <td>Bussiness Plan</td>
-                                        <td>Aug 13, 2026</td>
-                                        <td><strong>$680</strong></td>
-
-                                        <td>
-                                            <span class="status pending">
-                                                Pending
-                                            </span>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="customer">
-                                                <div class="customer-avatar">HA</div>
-
-                                                <div>
-                                                    <strong>Hassan Ali</strong>
-                                                    <small>hassan@email.com</small>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        <td>#ORD-1022</td>
-                                        <td>Starter Package</td>
-                                        <td>Aug 12, 2026</td>
-                                        <td><strong>$250</strong></td>
-
-                                        <td>
-                                            <span class="status completed">
-                                                Completed
-                                            </span>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <div class="customer">
-                                                <div class="customer-avatar">ZN</div>
-
-                                                <div>
-                                                    <strong>Zainab Noor</strong>
-                                                    <small>zainab@email.com</small>
-                                                </div>
-                                            </div>
-                                        </td>
-
-                                        <td>#ORD-1021</td>
-                                        <td>Enterprise Plan</td>
-                                        <td>Aug 11, 2026</td>
-                                        <td><strong>$1,240</strong></td>
-
-                                        <td>
-                                            <span class="status cancelled">
-                                                Cancelled
-                                            </span>
-
-                                        </td>
-
-                                    </tr>
-
-                                </tbody>
-
-                            </table>
-
-                        </div>
-
-                     </div>
-
-                     </section>
-
-                     <!-- ===========================
-                            PRODUCT TABLE
-                     ============================= -->
-
-                     <section id="products" class="section">
-
-                     <div class="product-table">
-                        <h3>Products</h3>
-
-                        <table>
-
-                            <thead>
-                                <tr>
-                                    <th>Product</th>
-                                    <th>Price</th>
-                                    <th>Category</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-
-                            <tbody id="productTableBody"></tbody>
-                              
-                        </table>
-                     </div>
-
-                     </section>
-
-                     <!-- ============================ 
-                           CUSTOMER TABLE
-                     ============================= -->
-
-                     <section id="customers" class="section">
-
-                     <div class="customer-table">
-                        <h3>Customers</h3>
-
-                        <table>
-
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Phone</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-
-                            <tbody id="customerTableBody"></tbody>
-                              
-                        </table>
-                     </div>
-
-                     </section>
-
-                     <!-- =======================
-                             ADD ORDERS
-                      ======================= -->
-
-                      <section id="orders" class="section">
-
-                        <div class="section-header">
-                            <div>
-                                <h2>Orders</h2>
-                                <p>Manage your customer orders</p>
-                            </div>
-
-                            <button class="primary-btn" id="addOrderBtn">
-                                + Add Order
-                            </button>
-                        </div>
-
-                        <!-- ======================
-                              ADD ORDER FORM
-                        ======================= -->
-
-                        <div class="form-container" id="orderFormContainer">
-                            <form id="orderForm">
-                                <div class="form-group">
-                                    <label for="orderCustomer">Customer</label>
-                                    <input type="text" id="orderCustomer" placeholder="Enter Customer Name" required>
-                                </div>
-
-                                 <div class="form-group">
-                                    <label for="orderProduct">Product</label>
-                                    <input type="text" id="orderProduct" placeholder="Enter Product Name" required>
-                                </div>
-
-                                 <div class="form-group">
-                                    <label for="orderQuantity">Quantity</label>
-                                    <input type="number" id="orderQuantity" placeholder="Enter quantity" min="1" required>
-                                </div>
-
-                                 <div class="form-group">
-                                    <label for="orderPrice">Price</label>
-                                    <input type="number" id="orderPrice" placeholder="Enter Price" min="0" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="orderStatus">Status</label>
-                                    <select id="orderStatus">
-                                        <option value="Pending">Pending</option>
-                                        <option value="Processing">Processing</option>
-                                        <option value="Completed">Completed</option>
-                                        <option value="cancelled">Cancelled</option>
-                                    </select>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="orderDate">Order Date</label>
-                                    <input type="date" id="orderDate">
-                                </div>
-
-                                 <div class="form-action">
-                                    <button type="submit" class="primary-btn">
-                                        Add Order
-                                    </button>
-
-                                 
-                                    <button type="button" class="secondary-btn" id="cancelOrderbtn">
-                                        Cancel
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-
-                     <!-- =========================
-                           ORDERS TABLE
-                     ========================== -->
-
-                     <div class="table-container">
-                        <h3>Orders List</h3>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Order ID</th>
-                                    <th>Customer</th>
-                                    <th>Product</th>
-                                    <th>Quantity</th>
-                                    <th>Price</th>
-                                    <th>Total</th>
-                                    <th>Status</th>
-                                    <th>Date</th>
-                                </tr>
-                            </thead>
-
-                            <tbody id="ordersTableBody">
-                              <!-- Orders will appear here -->
-                            </tbody>
-                        </table>
-                     </div>
-                      </section>
-
-                      <!-- =======================
-                              ANALYTICS
-                      ======================= -->
-
-                      <section id="analytics" class="section">
-                        <div class="section-header">
-                            <div>
-                                <h2>Analytics</h2>
-                                <p>Track your business performance</p>
-                            </div>
-                        </div>
-
-                        <div class="table-container">
-                            <h3>Analytics</h3>
-                            <p style="color:#777; padding: 10px 0;">Detailed analytics are coming soon.</p>
-                        </div>
-                      </section>
-
-                      <!-- =======================
-                              TRANSACTIONS
-                      ======================= -->
-
-                      <section id="transactions" class="section">
-                        <div class="section-header">
-                            <div>
-                                <h2>Transactions</h2>
-                                <p>View your payment transactions</p>
-                            </div>
-                        </div>
-
-                        <div class="table-container">
-                            <h3>Transactions</h3>
-                            <p style="color:#777; padding: 10px 0;">Transaction history is coming soon.</p>
-                        </div>
-                      </section>
-
-                      <!-- =======================
-                              SETTINGS
-                      ======================= -->
-
-                      <section id="settings" class="section">
-                        <div class="section-header">
-                            <div>
-                                <h2>Settings</h2>
-                                <p>Manage your account and preferences</p>
-                            </div>
-                        </div>
-
-                        <div class="table-container">
-                            <h3>Settings</h3>
-                            <p style="color:#777; padding: 10px 0;">Settings options are coming soon.</p>
-                        </div>
-                      </section>
-
-               </section>
-
-          </main>
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FariDev — Front-End Developer portfolio">
+  <title>FariDev | Front-End Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-1"></div><div class="ambient ambient-2"></div><div class="ambient ambient-3"></div>
+  <div class="stars" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="particles" id="particles" aria-hidden="true"></div>
+
+  <header class="header" id="home">
+    <nav class="nav container">
+      <a class="logo" href="#home">FariDev<span>.</span></a>
+      <button class="menu" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <div class="nav-links">
+        <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
       </div>
+      <a class="hire" href="#contact">Hire Me</a>
+    </nav>
+  </header>
 
-      <script src="script.js"></script>
+  <main>
+    <section class="hero container reveal">
+      <div class="hero-copy">
+        <div class="eyebrow">FRONT-END DEVELOPER</div>
+        <h1>Hi, I'm<br><strong>FariDev<span>.</span></strong></h1>
+        <h2>Front-End <span>Developer</span></h2>
+        <p>I'm a beginner front-end developer learning web development and building responsive, modern websites using HTML, CSS and JavaScript.</p>
+        <div class="actions"><a class="btn primary" href="#projects">View My Projects</a><a class="btn outline" href="#contact">Contact Me</a></div>
+        <div class="socials"><a href="#" id="ghProfile" aria-label="GitHub">◉</a><a href="https://pk.linkedin.com/in/fari-dev-789993438" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a><a href="mailto:hello@faridev.dev" aria-label="Email">✉</a></div>
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+        <div class="photo-wrap"><div class="photo-ring"></div><img src="images/profile.jpg" alt="FariDev profile photo"></div>
+        <div class="code-card"><b>&lt;/&gt;</b><span>Code is my<br><strong>Passion</strong></span></div>
+        <i class="spark s1"></i><i class="spark s2"></i><i class="spark s3"></i>
+      </div>
+    </section>
 
-   </body>
+    <section class="about-panel container reveal" id="about">
+      <div class="about-intro"><div class="section-label">About Me</div><h2>Who I Am</h2><p>I'm a beginner front-end developer who enjoys building clean, modern and responsive websites. I'm always learning and improving my skills through practical projects.</p><a class="btn outline small" href="#contact">Let's Work Together</a></div>
+      <div class="mini-cards">
+        <article><b>&lt;/&gt;</b><strong>HTML</strong><span>Developing</span></article><article><b>✦</b><strong>CSS</strong><span>Developing</span></article><article><b>JS</b><strong>JavaScript</strong><span>Learning</span></article><article><b>✚</b><strong>Always Learning</strong><span>Growth mindset</span></article>
+      </div>
+    </section>
 
- </html>
+    <section class="section container reveal" id="skills">
+      <div class="section-label">My Skills</div><div class="heading-row"><h2>My current <span>toolkit.</span></h2><p>Growing through hands-on projects and consistent practice.</p></div>
+      <div class="skill-grid">
+        <article class="skill"><div class="skill-icon">HTML</div><div><h3>HTML</h3><p>Structure and content of web pages.</p><small>Comfortable</small><div class="bar"><i style="width:70%"></i></div></div><b>70%</b></article>
+        <article class="skill"><div class="skill-icon">CSS</div><div><h3>CSS</h3><p>Styling and responsive design.</p><small>Developing</small><div class="bar"><i style="width:55%"></i></div></div><b>55%</b></article>
+        <article class="skill"><div class="skill-icon">JS</div><div><h3>JavaScript</h3><p>Interactivity and dynamic features.</p><small>Learning</small><div class="bar"><i style="width:35%"></i></div></div><b>35%</b></article>
+      </div>
+    </section>
+
+    <section class="section container reveal" id="projects">
+      <div class="section-label">My Projects</div><div class="heading-row"><h2>Real <span>projects.</span></h2><p>Selected work I've built while learning and improving my front-end skills.</p></div>
+      <div class="projects-grid">
+        <article class="project"><div class="project-image"><img src="images/shoply.jpg" alt="Shoply e-commerce project screenshot"><div class="number">01</div></div><div class="project-body"><div class="tech">HTML <span>•</span> CSS <span>•</span> JavaScript</div><h3>Shoply — E-Commerce Website</h3><p>A responsive e-commerce website with product browsing, categories, filters, product details, cart functionality, responsive design and animations.</p><div class="project-actions"><a class="pill" href="shoply/index.html" target="_blank" rel="noopener">Live Demo ↗</a><a class="pill ghost" href="#" id="repoShoply">GitHub ↗</a></div></div></article>
+        <article class="project"><div class="project-image"><img src="images/businesspro.jpg" alt="BusinessPro Dashboard screenshot"><div class="number">02</div></div><div class="project-body"><div class="tech">HTML <span>•</span> CSS <span>•</span> JavaScript</div><h3>BusinessPro Dashboard</h3><p>A modern business dashboard with sidebar navigation, search, products, customers, orders and interactive dashboard functionality.</p><div class="project-actions"><a class="pill" href="business-dashboard/index.html" target="_blank" rel="noopener">Live Demo ↗</a><a class="pill ghost" href="#" id="repoBusinessPro">GitHub ↗</a></div></div></article>
+        <article class="project"><div class="project-image"><img src="images/nexora.png" alt="Nexora business website screenshot"><div class="number">03</div></div><div class="project-body"><div class="tech">HTML <span>•</span> CSS <span>•</span> JavaScript</div><h3>Nexora</h3><p>A modern responsive business/landing website with animated sections, modern UI and interactive elements.</p><div class="project-actions"><a class="pill" href="NEXORA%20Project/index.html" target="_blank" rel="noopener">Live Demo ↗</a><a class="pill ghost" href="#" id="repoNexora">GitHub ↗</a></div></div></article>
+        <article class="project more"><div class="more-inner"><b>+</b><h3>More Projects</h3><p>Space for your next front-end project.</p></div></article>
+      </div>
+    </section>
+
+    <section class="section container reveal" id="services">
+      <div class="section-label">Services</div><div class="service-grid"><article><b>01</b><h3>Responsive Website Development</h3><p>Responsive layouts that work smoothly across desktop, tablet and mobile.</p></article><article><b>02</b><h3>Landing Page Development</h3><p>Modern landing pages with clear hierarchy and polished interactions.</p></article><article><b>03</b><h3>Front-End UI Development</h3><p>Clean interfaces built with HTML, CSS and JavaScript.</p></article></div>
+    </section>
+
+    <section class="why container reveal"><div class="why-title"><div class="section-label">Why Work With Me</div><h2>Small details make<br><span>a big difference.</span></h2></div><div class="why-grid"><div><b>01</b><h3>Responsive Designs</h3><p>Your website will look great on different screens.</p></div><div><b>02</b><h3>Clean UI</h3><p>Simple, modern and user-friendly interfaces.</p></div><div><b>03</b><h3>Modern Animations</h3><p>Subtle motion to enhance the user experience.</p></div><div><b>04</b><h3>Attention to Detail</h3><p>Careful spacing, typography and polished states.</p></div></div></section>
+
+    <section class="contact container reveal" id="contact"><div class="contact-copy"><div class="section-label">Let's Work Together</div><h2>Have an idea?<br><span>Let's build it.</span></h2><p>Have a website idea or front-end project in mind? Send a message and let's talk about it.</p><div class="contact-links"><a href="mailto:hello@faridev.dev">✉ Email</a><a href="#" id="ghProfileContact">◈ GitHub</a></div></div><form id="contactForm"><label>Name<input name="name" required placeholder="Your name"></label><label>Email<input name="email" type="email" required placeholder="you@example.com"></label><label>Message<textarea name="message" required placeholder="Tell me about your project..."></textarea></label><button class="btn primary" type="submit">Send Message ↗</button><small id="formStatus"></small></form></section>
+  </main>
+
+  <footer class="footer container"><span>© 2026 FariDev. All rights reserved.</span><a href="#home">Back to top ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
